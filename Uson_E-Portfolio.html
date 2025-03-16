@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uson_1stQTR_E-Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            background-color: #F5F5DC;
+        }
+        .header {
+            background-image: url('images/green-bg.jpg');
+            color: black;
+            width: 20%;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            position: sticky;
+            top: 0; 
+            overflow-y: auto; 
+        }
+        .header h1, .header h3 {
+            margin: 10px 0;
+        }
+        .footer {
+            margin-top: auto;
+        }
+        .tabs {
+            display: flex;
+            cursor: pointer;
+            padding: 10px;
+            background: #f1f1f1;
+            width: 100%;
+        }
+        .tab {
+            flex: 1;
+            padding: 14px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+        .tab:hover {
+            background: #ddd;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+            flex-grow: 1;
+        }
+        .active {
+            display: block;
+        }
+        .tab.active {
+            background: #c5f9f7; 
+            color: black;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+        ol {
+            margin: 10px;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .image-row {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            width: 100%;
+            position: relative;
+        }
+        .image-left {
+            position: absolute; 
+            left: 0;
+        }
+        .image-right {
+            position: absolute;
+            right: 0;
+        }
+        .image-center {
+            display: block; 
+            max-width: 100%; 
+            height: auto;
+        }
+        .main-content {
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+    </style>
+     <script type="text/javascript">
+        function popup1()
+        {
+            alert("Try Again! :(")
+        }
+        function popup2()
+        {
+            alert("CORRECT! :D")
+        }
+    </script>    
+</head>
+<body>
+    <div class="header">
+        <h2>E-Portfolio in TLE/ICT 9</h2>
+        <h3 style="margin-top: auto;">
+            <em>
+            Hi! You can call me Yssa. I'm a student from 9 - Fairness and I present to you my first and second quarter e-portfolio in TLE/ICT. It contains all our activities during the quarters, pictures, videos, and some facts about me.
+            </em>
+        </h3>
+        <div class="footer">
+            <em> Submitted by: </em>
+            <p> Uson, Yssabela Marie H. <br> 9 - Fairness</p>
+            <em> Submitted to: </em>
+            <p> Ms. Mary Grace G. Uminga </p>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="tabs">
+            <div class="tab" onclick="openTab('about')">All About Me</div>
+            <div class="tab" onclick="openTab('activities-tle')">Activities In TLE-ICT</div>
+            <div class="tab" onclick="openTab('activities-other')">Activities In Other Subjects</div>
+            <div class="tab" onclick="openTab('reflection')">Reflections</div>
+        </div>
+        <audio id="audio_play">
+            <source src="audios/I Will (Remastered 2009)_p-abNGP1BK4.mp3" type="audio/ogg" />
+            <source src="audios/I Will (Remastered 2009)_p-abNGP1BK4.mp3" type="audio/mpeg" />
+        </audio>
+        <img src="images/COM.png" width="100" height="100" onClick="document.getElementById('audio_play').play(); return false;" />
+        <img src="images/text.png" align="top" alt="text1" width="75" height="35" />
+        <img src="images/deer.png" align="right" width="100" height="100" onClick="document.getElementById('audio_play').pause(); return false;" />
+        <img src="images/text2.png" align="right" alt="text1" width="75" height="35" />
+        <div id="about" class="content active">
+            <h2 style="background-color: #5d97d8; padding: 10px; ">Likes & Dislikes</h2>
+            <div style="display: flex;">
+                <div>
+                    <h3>Likes:</h3>
+                    <ul>
+                        <li>Playing different kinds of instruments (ex: guitar, bass, ukulele)</li>
+                        <li>Travelling</li>
+                        <li>Eating</li>
+                        <li>Playing rhythm games</li>
+                        <li>Talking with my friends and classmates</li>
+                        <li>Scrolling through TikTok and Instagram</li>
+                        <li>Watching Thai dramas & K-dramas</li>
+                    </ul>
+                </div>
+                <img src="images/Loose_Fish.png" alt="Loose_Fish-Hirono" width="200" height="200">
+                <div>
+                    <h3>Dislikes:</h3>
+                    <ul>
+                        <li>Loud chewing</li>
+                        <li>Crowded places</li>
+                        <li>Public Speaking</li>
+                        <li>Heavy workload</li>
+                        <li>Exam/Hell weeks</li>
+                    </ul>
+                </div>
+                <img src="images/Aviator.png" alt="Aviator_Hirono" width="150" height="190" align="rtf">
+            </div>
+            <h2 style="background-color: #5d97d8; padding: 10px; ">Fun Facts About Me</h2>
+            <h3>My favorite country I've travelled to so far is Singapore</h3>
+            <h5>(images can be clicked)</h5>
+            <table>
+                <tr>
+                    <th colspan="2" class="text-center">Some of the things I like about Singapore</th>
+                </tr>
+                <tr>
+                    <td class="text-center"> Merlion </td>
+                    <td class="text-center">
+                        <a href="https://www.visitsingapore.com/neighbourhood/featured-neighbourhood/marina-bay/merlion-park/" target="_blank">
+                        <img src="images/Merlion.jpg" alt="Merlion" width="250" height="250"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> Marina Bay Sands </td>
+                    <td class="text-center">
+                        <a href="https://www.marinabaysands.com" target="_blank">
+                            <img src="images/MRB.jpg" alt="Marina Bay Sands" width="350" height="250">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> Chili Crab </td>
+                    <td class="text-center">
+                        <a href="https://www.recipetineats.com/singapore-chilli-crab/" target="_blank">
+                        <img src="images/Crab.jpg" alt="Chili Crab" width="250" height="250"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> Universal Studios </td>
+                    <td class="text-center">
+                        <a href="https://www.sentosa.com.sg/en/things-to-do/attractions/universal-studios-singapore/" target="_blank">
+                        <img src="images/Universal.jpg" alt="Universal Studios" width="350" height="250"></a>
+                    </td>
+                </tr>
+            </table>
+            <h3>My favorite soda is Root Beer</h3>
+            <table>
+                <tr>
+                    <td class="text-center">
+                        <img src="images/RB1.jpg" alt="Root Beer 1" width="250" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <img src="images/RB2.jpg" alt="MRoot Beer 2" width="250" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <img src="images/RB3.jpg" alt="Root Beer 3" width="250" height="250">
+                    </td>
+                </tr>
+            </table>
+            <h3>Our family pets</h3>
+            <table>
+                <tr>
+                    <th colspan="3" class="text-center">My family owns two dogs, one named Mochi and the other is Truffle.</th>
+                </tr>
+                <tr>
+                    <td class="text-center"> Mochi  </td>
+                    <td class="text-center">
+                        <img src="images/Mochi1.jpg" alt="Mochi" width="200" height="250">
+                    </td>
+                    <td class="text-center">
+                        <img src="images/Mochi2.jpg" alt="Mochi (again)" width="200" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> Truffle  </td>
+                    <td class="text-center">
+                        <img src="images/Truffle1.jpg" alt="Truffle" width="200" height="250">
+                    </td>
+                    <td class="text-center">
+                        <img src="images/Truffle2.jpg" alt="Truffle (again)" width="200" height="250">
+                    </td>
+                </tr>
+            </table>
+            <h3>I collect figures called "Hirono".</h3>
+            <table>
+                <tr>
+                    <td class="text-center"> The Aviator </td>
+                    <td class="text-center">
+                        <img src="images/Hirono1.jpg" alt="H1" width="350" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> Costume </td>
+                    <td class="text-center">
+                        <img src="images/Hirono2.jpg" alt="H2" width="200" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> Circus </td>
+                    <td class="text-center">
+                        <img src="images/Hirono3.jpg" alt="H3" width="200" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> The Merchant </td>
+                    <td class="text-center">
+                        <img src="images/Hirono4.jpg" alt="H4" width="200" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> Group Photo </td>
+                    <td class="text-center">
+                        <img src="images/hironos.jpg" alt="H5" width="350" height="250">
+                        <img src="images/case.jpg" alt="H6" width="350" height="250">
+                    </td>
+                </tr>
+            </table>
+            <h3>I'm  the Bassist of the band 6IX.</h3>
+            <video style="display: block; margin: 0 auto;" width="640" height="360" controls>
+                <source src="videos/6IX.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <img src="images/Protector.png" alt="Protector_Hirono" width="200" height="210" align="right">
+            <h3>Are there any more things you want to know about me or perhaps ask me? :)</h3>
+            <form>
+                <label for="feedback">Tell them here:</label><br>
+                <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br>
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </form>
+            <a href="#about" id="backToTop" style="display: block; margin-top: 20px;">Back to Top</a>
+        </div>
+
+        <div id="activities-tle" class="content" style="flex-direction: column; align-items: center;">
+            <h2 style="background-color: rgb(194, 250, 211, 0.7); padding: 10px; ">1st Quarter</h2>
+            <h3 class="text-center"> <em> Applying/Using Hyperlinks in HTML </em> </h3>
+            <div class="image-row">
+                <video class="image-center" width="640" height="360" controls>
+                    <source src="videos/Uson_Recording.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <img class="image-right" src="images/Destroyer.png" alt="Destroyer_hirono" width="180" height="300" align="right">
+            </div>
+
+            <h3 class="text-center"> <em> Nesting Lists and Tables in HTML (Grouped Output) </em> </h3>
+            <img class="image-center" style="margin:0 auto;" src="images/Grouped.jpg" alt="Nesting Lists and Tables in HTML" width="450" height="350">
+            <h3 class="text-center"> <em> Merging Cells in HTML (Pair Work) </em> </h3>
+            <div class="image-row">
+                <img class="image-left" src="images/Pretender.png" alt="Pretender_hirono" width="180" height="300">
+                <img class="image-center" src="images/Pairwork.jpg" alt="Merging Cells in HTML" width="450" height="350">
+            </div>
+            <h3 class="text-center"> <em> Applying Forms in HTML </em> </h3>
+            <img class="image-center" style="margin:0 auto;" src="images/Forms.jpg" alt="Applying Forms in HTML" width="450" height="350">
+            <br><br>
+            <h2 style="background-color: rgb(194, 250, 211, 0.7); padding: 10px; ">2nd Quarter</h2>
+            <h3 class="text-center"> <em> Pairwork 2.1 </em> </h3>
+            <img class="image-center" style="margin:0 auto;" src="images/2.1.jpg" alt="Pairwork2.1" width="450" height="350">
+            <h3 class="text-center"> <em> Pairwork 2.2 </em> </h3>
+            <img class="image-center" style="margin:0 auto;" src="images/2.2.jpg" alt="Pairwork2.2" width="450" height="350">
+            <h2 style="background-color: rgb(194, 250, 211, 0.7); padding: 10px; ">3rd Quarter</h2>
+            <h3 class="text-center"> <em> Concatenation </em> </h3>
+            <img class="image-center" src="images/Concatenation.jpg" alt="Concatenation" style="margin:0 auto;" width="450" height="350">
+            <h3 class="text-center"> <em> Hands-On </em> </h3>
+            <img class="image-center" src="images/sleep.jpg" alt="Hands-On" style="margin:0 auto;" width="450" height="350">
+            <h3 class="text-center"> <em> Activity </em> </h3>
+            <img class="image-center" src="images/mabuhay.jpg" alt="activity" style="margin:0 auto;" width="450" height="350">
+            <h2 style="background-color: rgb(194, 250, 211, 0.7); padding: 10px; ">4th Quarter</h2>
+            <h3 class="text-center"> <em> Alert </em> </h3>
+            <img class="image-center" src="images/Alert.png" alt="Alert" style="margin:0 auto;" width="450" height="350"><br>
+            <h3 class="text-center"> <em> Confirm</em> </h3>
+            <img class="image-center" src="images/Confirm.png" alt="Confirm" style="margin:0 auto;"  width="450" height="350"><br>
+            <h3 class="text-center"> <em> Prompt </em> </h3>
+            <img class="image-center" src="images/Prompt.png" alt="Prompt" style="margin:0 auto;" width="450" height="350">
+        </div>
+
+        <div id="activities-other" class="content">
+            <h2 style="background-color: #5d97d8; padding: 10px; ">1st Quarter - Events/Activities</h2>
+            <table>
+                <tr>
+                    <td class="text-center"> Science Human Simulation Roleplay </td>
+                    <td class="text-center">
+                        <img src="images/Science.jpg" alt="Science Roleplay" width="200" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> MAPEH Stained Glass </td>
+                    <td class="text-center">
+                        <img src="images/Mosaic.jpg" alt="MAPEH Stained Glass" width="200" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> Interactive Notebook </td>
+                    <td class="text-center">
+                        <img src="images/AP.jpg" alt="Interactive Notebook" width="200" height="250">
+                    </td>
+                </tr>
+            </table>
+            <form>
+                <img src="images/Robot.png" alt="Robot_hirono" width="150" height="200" align="right">
+                <h3>Which activity was the most challenging for you this quarter?</h3>
+                
+                <input type="radio" id="science" name="subject" value="science">
+                <label for="science">Science Roleplay</label><br>
+                
+                <input type="radio" id="mapeh" name="subject" value="mapeh">
+                <label for="mapeh">Stained Glass</label><br>
+        
+                <input type="radio" id="ap" name="subject" value="ap">
+                <label for="ap">Interactive Notebook</label><br>
+                
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label><br><br>
+                
+                <button type="submit">Submit</button>
+            </form>
+            <br><br>
+            <h2 style="background-color: #5d97d8; padding: 10px; ">2nd Quarter - Events/Activities</h2>
+            <table>
+                <tr>
+                    <td class="text-center"> Mapeh Poster </td>
+                    <td class="text-center">
+                        <img src="images/health.jpg" alt="poster" width="350" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> Filipino Talumpati </td>
+                    <td class="text-center">
+                        <img src="images/talumpati.jpg" alt="MAPEH Stained Glass" width="230" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> A.P. Interactive Notebook </td>
+                    <td class="text-center">
+                        <img src="images/interactive.jpg" alt="Interactive Notebook" width="200" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> Book Character </td>
+                    <td class="text-center">
+                        <img src="images/loki.jpg" alt="loki" width="200" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> Earthquake Drill </td>
+                    <td class="text-center">
+                        <img src="images/drill.jpg" alt="drill" width="200" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> Science Pageant (Roleplay) </td>
+                    <td class="text-center">
+                        <video style="display: block; margin: 0 auto;" width="600" height="320" controls>
+                            <source src="videos/Pageant.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> Historical Icon </td>
+                    <td class="text-center">
+                        <video style="display: block; margin: 0 auto;" width="600" height="320" controls>
+                            <source src="videos/MVP.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </td>
+                </tr>
+            </table>
+            <h2 style="background-color: #5d97d8; padding: 10px; ">3rd Quarter - Events/Activities</h2>
+            <table>
+                <tr>
+                    <td class="text-center"> MVP </td>
+                    <td class="text-center">
+                        <img src="images/MVP.jpg" alt="MVP" width="200" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> Spine Boarding </td>
+                    <td class="text-center">
+                        <img src="images/Board.jpg" alt="Spine Board" width="200" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> Damath Board </td>
+                    <td class="text-center">
+                        <img src="images/Damath.jpg" alt="Damath Board" width="200" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> VPOP </td>
+                    <td class="text-center">
+                        <img src="images/VPOP.jpg" alt="VPOP" width="200" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> Research Defense </td>
+                    <td class="text-center">
+                        <img src="images/defense.jpg" alt="ResearchDefense" width="350" height="220">
+                    </td>
+                </tr>
+            </table>
+            <h2 style="background-color: #5d97d8; padding: 10px; ">4th Quarter - Events/Activities</h2>
+            <table>
+                <tr>
+                    <td class="text-center"> Miting De Avance </td>
+                    <td class="text-center">
+                        <img src="images/Miting.jpg" alt="MitingDeAvance" width="350" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> One-Act Play </td>
+                    <td class="text-center">
+                        <img src="images/OAP.jpg" alt="One-Act Play" width="350" height="250">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> Battle of the Bands </td>
+                    <td class="text-center">
+                        <img src="images/BOTB.jpg" alt="BOTB" width="200" height="320">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center"> Street Dance </td>
+                    <td class="text-center">
+                        <img src="images/Street.jpg" alt="Streetdance" width="350" height="220">
+                    </td>
+                </tr>
+            </table>
+            <h2 style="background-color: #5d97d8; padding: 10px; " class="text-center">What event/activity do you think I enjoyed the most?<br>(choose below)</h2>
+            <input type="button" value="One-Act Play" onClick="popup1()"/><br><br>
+            <input type="button" value="Battle of the Bands" onClick="popup2()"/><br><br>
+            <input type="button" value="Street Dance" onClick="popup1()"/><br><br>
+            <input type="button" value="Miting De Avance" onClick="popup1()"/><br><br>
+        </div>
+
+        <div id="reflection" class="content">
+            <h2 style="background-color: rgb(194, 250, 211, 0.7); padding: 10px; font-family: 'Mongolian Baiti';">1st Quarter Reflection in ICT-TLE</h2>
+            <div class="text-center" style="font-family: 'Bookman Old Style';padding: 20px; max-width: 1000px; margin: 0 auto;background-color: #f0f0f0; border-radius: 5px; line-height: 1.5;">
+                <p>
+                    Time sure flies by swiftly, it's already the end of the first quarter. To be honest, ninth grade has been exhausting. All the lessons, activities, exams, and outputs got harder and our workload doubled when compared to last year. But, I am trying my best to keep up.
+                </p>
+                <p>
+                    If I were given the chance to go back to the first day of ninth grade and give my past self a piece of advice, it would be "Do not procrastinate nor cram". One of the hardest challenges I faced this quarter was managing my time, unlike in eighth grade where I could cram and speed run all my tasks, now, I can't even sleep if there's still a pending activity on my to-do list. Also, the projects and performance tasks given to us take a lot of time and effort to finish. An example is the Interactive Notebook in Araling Panlipunan, I spent days and nights working and accomplishing that project. Another example is what you're reading and seeing right now, yes, this E-Portfolio. However, even though it takes most of my time, I still learn and progress which is a sign that my knowledge about these unfamiliar things is developing. I wasn't interested in coding back then, and that's why I failed some of my early "hands-on" in ICT. But, those failures gave me the motivation to practice more and enhance my skills in this subject.
+                </p>
+                <p>
+                    In conclusion, ICT or ninth grade in general has been full of ups and downs this quarter. Now, I know what to focus on more in the next quarters to make up for my mistakes. That's all for my reflection, good luck to my classmates, batchmates, and especially myself.
+                </p>
+            </div>
+            <h2 style="background-color: #5d97d8; padding: 10px; font-family: 'Mongolian Baiti';">2nd Quarter Reflection in ICT-TLE</h2>
+            <div class="text-center" style="font-family: 'Bookman Old Style';padding: 20px; max-width: 1000px; margin: 0 auto;background-color: #f0f0f0; border-radius: 5px; line-height: 1.5;">
+                <p>
+                    Throughout this quarter of learning CSS, my skills and knowledge have developed on how to style and organize my web pages. This is thanks to our ICT teacher Ms. Uminga, for always giving us the chance to explore coding on our own. However there are times when I'm under a lot of pressure, specifically time pressure during hands-on.
+                </p>
+                <p>
+                    To be honest, we didn't have a lot of time to discuss our lessons in ICT this quarter. Due to extracurriculars and events held every month by other subjects. But, we still managed to accomplish some tasks assigned to us. I'm also thankful that our teacher is open to giving us time for other activities, like the MVP, VPOP, and many more. 
+                </p>
+                <p>
+                    Additionally, coding with CSS has helped me maintain cleanliness in my web page, by providing various layouts that are easy to understand. I hope that I can learn more about coding next quarter. Good luck to all! 
+                </p>
+            </div>
+            <h2 style="background-color: rgb(194, 250, 211, 0.7); padding: 10px; font-family: 'Mongolian Baiti';">3rd Quarter Reflection in ICT-TLE</h2>
+            <div class="text-center" style="font-family: 'Bookman Old Style';padding: 20px; max-width: 1000px; margin: 0 auto;background-color: #f0f0f0; border-radius: 5px; line-height: 1.5;">
+                <p>
+                    In this quarter, my ability to design dynamic and interactive web pages has been advanced by JavaScript. I've learned about the fundamental ideas that make the web come to life with the use of JavaScript, such as variables, functions, loops, and events. In addition to teaching me how to write, JavaScript has helped me develop my problem-solving, logical thinking, and precision skills—all of which are useful in both coding and everyday life.
+                </p>
+                <p>
+                    In conclusion, I can use this information to improve my ability to solve problems, have a logical approach on things, and even advance my chances of landing a tech job. JavaScript helps me make my ideas a reality, whether I'm making a basic to-do list app or a more reformed website. I am ready to continue learning and developing in this field, as my journey has only just began.
+                </p>
+            </div>
+            <h2 style="background-color: #5d97d8; padding: 10px; font-family: 'Mongolian Baiti';">4th Quarter Reflection in ICT-TLE</h2>
+            <div class="text-center" style="font-family: 'Bookman Old Style';padding: 20px; max-width: 1000px; margin: 0 auto;background-color: #f0f0f0; border-radius: 5px; line-height: 1.5;">
+                <p>
+                    During this quarter, I have learned a lot about web development. HTML gave me the foundation upon which I was able to build well-structured content. CSS enabled me to create unique layouts of content by incorporating styles and responsiveness. JavaScript added interactivity, where I was able to make dynamic and interactive web pages.
+                </p>
+                <p>
+                    One of the most important lessons I've learned is how to write clean, efficient code. Debugging and problem-solving have also been critical skills I've learned along the way. Knowing how the three technologies integrate has provided me with a strong base in front-end development.
+                </p>
+                <p>
+                    Lastly, I would like to thank our ICT teacher Ms. Uminga for having the patience and consistency any student could ask for in a teacher. I appreciate all the help and knowledge I received from her and from my classmates and friends, I will truely miss and look back to the memories I obtained from this subject/school year.
+            </div>
+            <br>
+            <h3 align="center">GOODBYE GRADE 9!</h3>
+            <img src="images/Float.png" alt="Float_Hirono" width="200" height="230" align="left"> 
+            <img src="images/Birdman.png" alt="Birdman_Hirono" width="150" height="200" align="right">
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
